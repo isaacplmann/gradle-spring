@@ -21,3 +21,14 @@ dependencies {
 	implementation project(':library')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
+tasks.register("mytask"){
+    group = "Custom"
+    description = "A custom task"
+}
+
+tasks.named("mytask"){
+    doFirst {
+        println("This is my task!")
+    }
+}

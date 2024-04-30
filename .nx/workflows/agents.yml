@@ -1,9 +1,9 @@
 launch-templates:
   linux-medium-java:
     resourceClass: 'docker_linux_amd64/medium'
-    image: 'ubuntu22.04-node20.9-v3'
+    image: 'ubuntu22.04-node20.11-v3'
     env:
       MY_ENV_VAR: shared
     init-steps:
-      - name: Checkout # using a reusable step
-        uses: 'nrwl/nx-cloud-workflows/v1.1/workflow-steps/checkout/main.yaml'
+      - name: Checkout
+        uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'

@@ -7,4 +7,5 @@ launch-templates:
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
-      - run: ls -R .nx
+      - name: Recursive ls
+        script: ls -R .nx

@@ -6,7 +6,9 @@ launch-templates:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
       - name: Set up Java
-        script: java --version
+        script: |
+          sudo apt install openjdk-18-jre-headless
+          java --version
       - name: Set up Gradle
         script: ./gradlew wrapper
       - name: Set up Nx

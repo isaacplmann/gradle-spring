@@ -9,6 +9,10 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    env:
+      # Configure the JVM and Gradle to avoid OOM errors
+      _JAVA_OPTIONS: "-Xmx3g"
+      GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
     steps:
       - name: Checkout project sources
         uses: actions/checkout@v4

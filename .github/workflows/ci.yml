@@ -21,7 +21,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Start CI run
-        run: 'npx nx-cloud start-ci-run --distribute-on="8 linux-medium-java"'
+        run: 'npx nx-cloud start-ci-run --distribute-on="8 linux-medium-jvm"'
       - uses: nrwl/nx-set-shas@v3
 
       # This line is needed for nx affected to work when CI is running on a PR

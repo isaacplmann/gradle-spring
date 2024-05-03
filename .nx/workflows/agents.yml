@@ -1,0 +1,14 @@
+launch-templates:
+  linux-medium-jvm:
+    resource-class: 'docker_linux_amd64/medium'
+    image: 'ubuntu22.04-node20.11-v7'
+    init-steps:
+      - name: Checkout
+        uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
+      - name: Set up Java
+        script: |
+          java --version
+      - name: Set up Gradle
+        script: ./gradlew wrapper
+      - name: Set up Nx
+        script: ./nx --version

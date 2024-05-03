@@ -20,6 +20,7 @@ public class DemoApplication {
 	public String home() {
 		return myService.message();
 	}
+	// change
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
